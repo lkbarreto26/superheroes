@@ -1,0 +1,19 @@
+.main-content{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+
+    .form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .button{
+            background-color: rgb(255, 115, 183);
+            color: #ffff;
+            margin-top: 30px;
+        }
+    }
+
+}

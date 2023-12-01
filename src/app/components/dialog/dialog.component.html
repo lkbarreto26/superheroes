@@ -1,0 +1,18 @@
+<div class="main-content">
+    <h3>{{ isEditing ? 'Editar' : 'Añadir' }} Superhéroe</h3>
+    <form class="form" (submit)="saveSuperhero()">
+
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input required [formControl]="name" matInput>
+          </mat-form-field>
+         
+          <mat-form-field>
+            <mat-label>Descripción</mat-label>
+            <textarea [formControl]="description" matInput></textarea>
+          </mat-form-field>
+
+       
+        <button class="button" mat-button type="submit">Guardar</button>
+    </form>
+</div>
