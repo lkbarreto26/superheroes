@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuperheroComponent } from './superhero.component';
+import { IndexComponent } from '../../pages/index/index.component';
 
-describe('SuperheroComponent', () => {
-  let component: SuperheroComponent;
-  let fixture: ComponentFixture<SuperheroComponent>;
+describe('IndexComponent', () => {
+  let component: IndexComponent;
+  let fixture: ComponentFixture<IndexComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SuperheroComponent]
+      declarations: [IndexComponent]
     });
-    fixture = TestBed.createComponent(SuperheroComponent);
+    fixture = TestBed.createComponent(IndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

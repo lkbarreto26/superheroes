@@ -1,17 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { SuperheroService } from '../../services/superhero.service';
-import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Superhero } from '../../interfaces/heroe.interface';
-
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
-} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -32,9 +23,6 @@ export class DialogComponent {
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Superhero,
   ) {
-
-    console.log("esta es la data que recibe");
-    console.log(data)
 
     if (data.name !== '') {
       this.isEditing = true;

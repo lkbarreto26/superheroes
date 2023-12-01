@@ -44,8 +44,6 @@ export class SuperheroComponent implements AfterViewInit {
   ngOnInit(): void {
     this.superheroService.getSuperheroes().subscribe(superheroes => {
       this.superheroes = superheroes;
-      console.log("esto es superheroes");
-      console.log(superheroes)
       this.dataSource = new MatTableDataSource<dataElement>(superheroes);
     });
 
@@ -55,13 +53,10 @@ export class SuperheroComponent implements AfterViewInit {
   }
 
   openDialog(data: Superhero): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
+  this.dialog.open(DialogComponent, {
       data: data,
     });
 
-    dialogRef.afterClosed().subscribe(() => {
-      console.log('The dialog was closed');
-    });
   }
 
 
